@@ -15,3 +15,73 @@
  */
  @import 'bootstrap-sprockets';
  @import 'bootstrap';
+
+ body {
+   background-image: url("https://s3-sa-east-1.amazonaws.com/portfolio-ryandhaase/IMG_5754.jpg");
+   background-size: cover;
+   background-attachment: fixed;
+ }
+
+ .projects_section {
+   background-color: #ffffff;
+   background-size: cover;
+ }
+
+ .home_section {
+   background-color: rgba(41, 41, 41, 0.9);
+ }
+
+ .nav-tabs {
+   border-bottom: none;
+   border-top: 1px solid #eeeeee;
+ }
+
+ .main {
+   margin-bottom: 20px;
+ }
+ .nav {
+   margin: 0;
+   padding: 20px 0 0;
+   text-align: center;
+ }
+
+ .nav li {
+   display: inline;
+   float: none;
+   padding: 0 5px;
+ }
+
+ .nav-tabs > li > a {
+   border-radius: 0;
+   border: none;
+   color: #eeeeee;
+   display: inline-block;
+   font-size: 16px;
+ }
+ .nav-tabs > li > a:hover {
+   background: none;
+   text-decoration: none;
+   border: none;
+   cursor: pointer;
+ }
+
+ .content {
+   color: #eeeeee;
+   text-align: center;
+   margin: 50px auto;
+   font-family: 'Raleway', sans-serif;
+ }
+
+ .content > h1 {
+   font-size: 50px;
+   margin-bottom: 20px;
+ }
+
+ .content > p {
+   font-size: 18px;
+ }
+
+ .avatar {
+   max-width: 150px;
+   margin: 0 auto 50px;
+ }

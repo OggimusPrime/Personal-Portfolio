@@ -14,4 +14,31 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap
+//= require scrollMonitor
 //= require_tree .
+
+$(function() {
+  var navMenu = $('#nav_menu');
+
+  var elementWatcher = scrollMonitor.create(navMenu);
+
+  // elementWatcher.visibilityChange(function() {
+  //   console.log(elementWatcher.isFullyInViewport)
+  // });
+
+  // elementWatcher.partiallyExitViewport(function() {
+  //   navMenu.addClass('fixed');
+  // });
+  // elementWatcher.enterViewport(function() {
+  //   navMenu.removeClass('fixed');
+  // });
+  elementWatcher.stateChange(function() {
+    if(elementWatcher.isFullyInViewport) {
+      navMenu.removeClass('fixed');
+      console.log("remove fixed");
+    } else {
+      navMenu.addClass('fixed');
+      console.log("added fixed");
+    }
+  });
+});

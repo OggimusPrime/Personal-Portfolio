@@ -57,6 +57,7 @@
    color: #eeeeee;
    display: inline-block;
    font-size: 16px;
+   font-family: 'Raleway', sans-serif;
  }
  .nav-tabs > li > a:hover {
    background: none;
@@ -84,4 +85,21 @@
  .avatar {
    max-width: 150px;
    margin: 0 auto 50px;
+ }
+
+ .projects_section {
+   min-height: 1000px;
+ }
+
+ .summary_section {
+   min-height: 1000px;
+ }
+
+ .fixed {
+   position: fixed;
+   top: 0;
+   background-color: rgba(41, 41, 41, 0.9);
+   width: 100%;
+   left: 0;
+   padding-bottom: 10px;
  }

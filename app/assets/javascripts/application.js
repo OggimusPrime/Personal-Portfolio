@@ -22,23 +22,24 @@ $(function() {
 
   var elementWatcher = scrollMonitor.create(navMenu);
 
+  elementWatcher.lock();
   // elementWatcher.visibilityChange(function() {
   //   console.log(elementWatcher.isFullyInViewport)
   // });
 
-  // elementWatcher.partiallyExitViewport(function() {
-  //   navMenu.addClass('fixed');
-  // });
-  // elementWatcher.enterViewport(function() {
-  //   navMenu.removeClass('fixed');
-  // });
-  elementWatcher.stateChange(function() {
-    if(elementWatcher.isFullyInViewport) {
-      navMenu.removeClass('fixed');
-      console.log("remove fixed");
-    } else {
-      navMenu.addClass('fixed');
-      console.log("added fixed");
-    }
+  elementWatcher.exitViewport(function() {
+    navMenu.addClass('fixed');
   });
+  elementWatcher.enterViewport(function() {
+    navMenu.removeClass('fixed');
+  });
+  // elementWatcher.stateChange(function() {
+  //   if(elementWatcher.isFullyInViewport) {
+  //     navMenu.removeClass('fixed');
+  //     console.log("remove fixed");
+  //   } else {
+  //     navMenu.addClass('fixed');
+  //     console.log("added fixed");
+  //   }
+  // });
 });

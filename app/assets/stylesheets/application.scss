@@ -16,15 +16,56 @@
  @import 'bootstrap-sprockets';
  @import 'bootstrap';
 
+ @media (max-width: 992px) {
+   #projects h1 {
+     text-align: center;
+   }
+
+   #projects p {
+     text-align: center;
+   }
+
+   #projects ul {
+     text-align: center;
+   }
+
+   .project_img {
+     margin: 0 auto 20px;
+   }
+ }
+
  body {
    background-image: url("https://s3-sa-east-1.amazonaws.com/portfolio-ryandhaase/IMG_5754.jpg");
    background-size: cover;
    background-attachment: fixed;
  }
 
+ h1, h2 {
+   font-family: 'Raleway', sans-serif;
+ }
+
+ p {
+   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+ }
+
  .projects_section {
    background-color: #ffffff;
    background-size: cover;
+   min-height: 1000px;
+   padding: 30px 0;
+ }
+
+ #projects > .row {
+   margin: 70px auto;
+   max-width: 900px;
+ }
+
+ #projects a {
+   color: #333333;
+ }
+
+ #projects h1 {
+   margin-top: 2px;
  }
 
  .home_section {
@@ -70,7 +111,6 @@
    color: #eeeeee;
    text-align: center;
    margin: 50px auto;
-   font-family: 'Raleway', sans-serif;
  }
 
  .content > h1 {
@@ -87,10 +127,6 @@
    margin: 0 auto 50px;
  }
 
- .projects_section {
-   min-height: 1000px;
- }
-
  .summary_section {
    min-height: 1000px;
  }
@@ -102,4 +138,25 @@
    width: 100%;
    left: 0;
    padding-bottom: 10px;
+   z-index: 1;
+ }
+
+ .project_img {
+   max-width: 440px;
+ }
+
+ .skills {
+   list-style: none;
+   padding-left: 0px;
+ }
+
+ .skills > li {
+   color: #ffffff;
+   line-height: 28px;
+   display: inline;
+   border-radius: 4px;
+   font-size: 12px;
+   background: #16a086;
+   padding: 4px 9px;
+   margin-right: 5px;
  }

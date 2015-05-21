@@ -128,10 +128,6 @@
    margin: 0 auto 50px;
  }
 
- .summary_section {
-   min-height: 1000px;
- }
-
  .fixed {
    position: fixed;
    top: 0;
@@ -160,6 +156,16 @@
    background: #16a086;
    padding: 4px 9px;
    margin-right: 5px;
+ }
+
+ .summary_section {
+   background-color: rgba(41, 41, 41, 0.9);
+   color: #eeeeee;
+   text-align: center;
+ }
+
+ #summary p {
+   font-size: 18px;
  }
 
  #contact {

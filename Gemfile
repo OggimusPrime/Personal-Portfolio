@@ -11,6 +11,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass'
 gem 'bundler', '>= 1.8.4'
 gem 'font-awesome-rails'
+gem 'puma'
+gem 'newrelic_rpm'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-scrollMonitor'

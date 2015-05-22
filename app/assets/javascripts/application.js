@@ -18,14 +18,11 @@
 //= require_tree .
 
 $(function() {
-  var navMenu = $('#nav_menu');
+  var navMenu = $('.nav_menu');
 
   var elementWatcher = scrollMonitor.create(navMenu);
 
   elementWatcher.lock();
-  // elementWatcher.visibilityChange(function() {
-  //   console.log(elementWatcher.isFullyInViewport)
-  // });
 
   elementWatcher.exitViewport(function() {
     navMenu.addClass('fixed');
@@ -33,13 +30,19 @@ $(function() {
   elementWatcher.enterViewport(function() {
     navMenu.removeClass('fixed');
   });
-  // elementWatcher.stateChange(function() {
-  //   if(elementWatcher.isFullyInViewport) {
-  //     navMenu.removeClass('fixed');
-  //     console.log("remove fixed");
-  //   } else {
-  //     navMenu.addClass('fixed');
-  //     console.log("added fixed");
-  //   }
-  // });
+});
+
+$(document).ready(function(){
+	$('a[href^="#"]').on('click',function (e) {
+	    e.preventDefault();
+
+	    var target = this.hash;
+	    var $target = $(target);
+
+	    $('html, body').stop().animate({
+	        'scrollTop': $target.offset().top
+	    }, 900, 'swing', function () {
+	        window.location.hash = target;
+	    });
+	});
 });

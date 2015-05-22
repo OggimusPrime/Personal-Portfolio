@@ -1,27 +1,29 @@
-<div id="contact" class="container contact">
-  <div class="col-md-6 col-md-offset-3">
+<div class='container contact'>
+  <div class='col-md-6 col-md-offset-3'>
     <h1>Contact</h1>
     <p>I'm available for hire and contract work, so get in touch:</p>
-    <p> <%= @user.email %> </p>
-    <ul class="social">
-      <li>
+    <p class='email'>
+      <%= @user.email %>
+    </p>
+    <ul class='social'>
+      <li class='social_icon'>
         <%= link_to @user.github do %>
-          <i class='fa fa-github-square'></i>
+        <i class='fa fa-github-square'></i>
         <% end %>
       </li>
-      <li>
+      <li class='social_icon'>
         <%= link_to @user.stackoverflow do %>
-          <i class="fa fa-stack-overflow"></i>
+        <i class="fa fa-stack-overflow"></i>
         <% end %>
       </li>
-      <li>
+      <li class='social_icon'>
         <%= link_to @user.linkedin do %>
-          <i class="fa fa-linkedin"></i>
+        <i class="fa fa-linkedin"></i>
         <% end %>
       </li>
-      <li>
+      <li class='social_icon'>
         <%= mail_to @user.email do %>
-          <i class="fa fa-envelope"></i>
+        <i class="fa fa-envelope"></i>
         <% end %>
       </li>
     </ul>

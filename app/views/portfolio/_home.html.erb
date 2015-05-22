@@ -1,18 +1,18 @@
-<div id="home" class="container home">
-  <div class="col-md-6 col-md-offset-3">
-    <div class="content">
-      <h1> <%= @user.name %> </h1>
+<div class='container home'>
+  <div class='col-md-6 col-md-offset-3'>
+    <div class='content'>
+      <h1 class='content_heading'> <%= @user.name %> </h1>
       <p> <%= @user.summary.gsub(/\n/, "<br/>").html_safe %> </p>
     </div>
-    <div class="avatar">
+    <div class='avatar'>
       <%= image_tag(@user.avatar, class: 'img-circle img-responsive') %>
     </div>
-    <nav id="nav_menu" class="main">
-      <ul class="nav nav-tabs">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#summary">Summary</a></li>
-        <li><a href="#contact">Contact</a></li>
+    <nav class='nav_menu'>
+      <ul class='nav nav-tabs'>
+        <li class='nav_items'><a class='nav_items_link' href='#home'>Home</a></li>
+        <li class='nav_items'><a class='nav_items_link' href='#projects'>Projects</a></li>
+        <li class='nav_items'><a class='nav_items_link' href='#summary'>Summary</a></li>
+        <li class='nav_items'><a class='nav_items_link' href='#contact'>Contact</a></li>
       </ul>
     </nav>
   </div>

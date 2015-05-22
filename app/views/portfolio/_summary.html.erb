@@ -1,10 +1,10 @@
-<div id="summary" class="container summary">
-  <div class="col-md-6 col-md-offset-3">
-    <div class="content">
+<div class='container summary'>
+  <div class='col-md-6 col-md-offset-3'>
+    <div class='content'>
       <h1>Summary</h1>
       <p> <%= @user.skills.gsub(/\n/, "<br/>").html_safe %> </p>
     </div>
-    <div class="avatar">
+    <div class='avatar'>
       <%= image_tag(@user.headshot, class: 'img-circle img-responsive') %>
     </div>
   </div>

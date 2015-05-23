@@ -35,6 +35,49 @@
   }
 }
 
+@media (max-width: 475px) {
+  .nav {
+    padding: 10px 0 0 !important;
+  }
+
+  .nav > .nav_items {
+    padding: 0px !important;
+  }
+
+  .nav_items > .nav_items_link {
+    padding: 5px 5px !important;
+  }
+
+  p {
+    font-size: 14px !important;
+  }
+
+  .nav_items_link {
+    font-size: 14px !important;
+  }
+
+  h1 {
+    font-size: 36px !important;
+  }
+
+  .project_heading {
+    font-size: 26px !important; 
+  }
+
+  .home, .summary {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .content {
+    margin: 25px auto !important;
+  }
+
+  .avatar {
+    margin: 0 auto 25px !important;
+  }
+}
+
 body {
   background-image: url("https://s3-sa-east-1.amazonaws.com/portfolio-ryandhaase/IMG_5754.jpg");
   background-size: cover;

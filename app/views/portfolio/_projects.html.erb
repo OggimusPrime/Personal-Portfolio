@@ -7,8 +7,13 @@
       </div>
     </div>
     <div class='col-md-6'>
-      <h1 class='project_heading'><strong> <%= link_to(project.name, project.link, class: 'project_heading') %> </strong></h1>
-      <p class='project_desc'> <%= project.description %> </p>
+      <h1 class='project_heading'>
+        <strong> <%= link_to(project.name, project.link, class: 'project_heading') %> </strong>
+        <small> <%= (project.project_date).strftime("%m/%d/%Y") %> </small>
+      </h1>
+      <p class='project_desc'>
+        <%= project.description %>
+      </p>
       <ul class='skills'>
         <% project.skills.each do |skill| %>
         <li class="tags"> <%= skill.tag %> </li>

@@ -1,4 +1,9 @@
 <div class='container projects'>
+  <div class='row'>
+    <div class='col-md-12' style="text-align:center">
+      <h1><strong>Projects</strong></h1>
+    </div>
+  </div>
   <% @user.projects.each_with_index do |project, index| %>
   <div class='row project'>
     <div class='col-md-6'>
@@ -7,10 +12,10 @@
       </div>
     </div>
     <div class='col-md-6'>
-      <h1 class='project_heading'>
+      <h2 class='project_heading'>
         <strong> <%= link_to(project.name, project.git_hub_link, class: 'project_heading') %> </strong>
         <small> <%= (project.project_date).strftime("%m/%d/%Y") %> </small>
-      </h1>
+      </h2>
       <p class='project_desc'>
         <%= project.description %>
       </p>
